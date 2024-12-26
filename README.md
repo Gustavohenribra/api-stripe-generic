@@ -28,6 +28,7 @@ Este projeto é uma API desenvolvida para gerenciar assinaturas e pagamentos uti
 - **cors**: Middleware para habilitar CORS.
 - **body-parser**: Middleware para parse de JSON.
 - **express-rate-limit**: Middleware para limitar requisições.
+- **Jest**: Framework de testes para assegurar qualidade do código.
 
 ---
 
@@ -48,13 +49,16 @@ Middlewares de autenticação e manipulação de erros.
 ### `/exceptions/`
 Gerencia exceções personalizadas para uma resposta mais detalhada em caso de erros.
 
+### `/__tests__/`
+Contém os testes automatizados do projeto.
+
 ---
 
 ## Instalação
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/Gustavohenribra/api-stripe-generic.git
    ```
 2. Instale as dependências:
    ```bash
@@ -62,8 +66,20 @@ Gerencia exceções personalizadas para uma resposta mais detalhada em caso de e
    ```
 3. Inicie o servidor:
    ```bash
-   npm start
+   npm run dev
    ```
+
+---
+
+## Testes
+
+Este projeto utiliza o **Jest** para testes unitários e de integração. Para rodar os testes:
+
+1. Execute o comando:
+   ```bash
+   npm run test
+   ```
+2. O Jest executará os testes na pasta `__tests__/` e exibirá os resultados no terminal.
 
 ---
 
@@ -80,6 +96,8 @@ Atualiza uma assinatura (upgrade ou downgrade).
 
 ### `POST /payment/handleWebhook`
 Manipula eventos enviados pelo Stripe via webhooks.
+
+---
 
 ## Contribuição
 
