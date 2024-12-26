@@ -32,10 +32,12 @@ app.use(errorMiddleware);
 
 const PORT = process.env.PORT || 3001;
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
     // process.env.API_KEY ? console.log("API_KEY está definida") : console.log("Defina no .env a API_KEY");
     // process.env.STRIPE_PUBLISH_KEY ? console.log("STRIPE_PUBLISH_KEY está definida") : console.log("Defina no .env a STRIPE_PUBLISH_KEY");
     // process.env.STRIPE_SECRET_KEY ? console.log("STRIPE_SECRET_KEY está definida") : console.log("Defina no .env a STRIPE_SECRET_KEY");
     // process.env.STRIPE_WEBHOOK ? console.log("STRIPE_WEBHOOK está definida") : console.log("Defina no .env a STRIPE_WEBHOOK");
 })
+
+export default server;
